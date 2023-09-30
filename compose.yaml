@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    container_name: 'otus-postgres'
+    environment:
+      - 'POSTGRES_DB=otus'
+      - 'POSTGRES_PASSWORD=otus'
+      - 'POSTGRES_USER=otus'
+    ports:
+      - '5432'

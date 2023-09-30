@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "7f9371c2-5ead-41f1-b495-8de32e8e451d",
+		"name": "HomeWork1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11820829"
+	},
+	"item": [
+		{
+			"name": "get user by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxOGE1Zjc5NS0wYzhiLTQ0ZTgtYTM2Ni01NzBjMDlkYjZkYmQiLCJleHAiOjE2OTk2ODk0MzcsImZpcnN0TmFtZSI6ItCY0LzRjyIsInNlY29uZE5hbWUiOiLQpNCw0LzQuNC70LjRjyJ9.t2Hg-PC7GzGwUDSUolrA4hJVnSxbtcXQY7Djwuhs7Xc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/user/get/e91bbaf8-07a7-44ae-b91c-bd0329150a75",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"get",
+						"e91bbaf8-07a7-44ae-b91c-bd0329150a75"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"18a5f795-0c8b-44e8-a366-570c09db6dbd\",\n  \"password\": \"Пароль\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstName\": \"Имя2\",\n  \"secondName\": \"Фамилия2\",\n  \"birthdate\": \"2017-02-02\",\n  \"biography\": \"Хобби, интересы и т.п.\",\n  \"city\": \"Москва\",\n  \"password\": \"Пароль2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

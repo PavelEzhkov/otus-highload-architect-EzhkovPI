@@ -1,0 +1,44 @@
+databaseChangeLog:
+  -  changeSet:
+       id:  1
+       author:  pavel
+       changes:
+         -  createTable:
+              tableName:  user
+              columns:
+                -  column:
+                     name:  id
+                     type:  UUID
+                     constraints:
+                       primaryKey:  true
+                       nullable:  false
+                -  column:
+                     name:  first_name
+                     type:  varchar(50)
+                     constraints:
+                       nullable: false
+                -  column:
+                     name:  second_name
+                     type:  varchar(50)
+                     constraints:
+                       nullable:  false
+                - column:
+                    name: birthdate
+                    type: date
+                    constraints:
+                      nullable: false
+                -  column:
+                     name:  biography
+                     type:  varchar(500)
+                     constraints:
+                       nullable:  false
+                -  column:
+                     name:  city
+                     type:  varchar(50)
+                     constraints:
+                       nullable:  false
+                -  column:
+                     name:  password
+                     type:  varchar(200)
+                     constraints:
+                       nullable:  false
